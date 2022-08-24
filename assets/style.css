@@ -2,56 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: rgb(201, 189, 189);
 }
 
 body {
-    color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     padding: 25px 35px;
-    background-color: aqua;
 }
 
-.search-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 30px 20px 30px;
+form.example input[type=text] {
     padding: 10px;
-    border: 2px solid black;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
 }
 
-.search-div button {
+form.example button {
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container {
+    border: 3px solid black;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.container h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.day-forecast {
-    border: 2px solid black;
-    margin: 20px 30px 20px 30px;
-}
-
-.day-forecast .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-}
-
-.day-forecast .city-name {
-    padding-left: 20px;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-}
-
-.day-forecast .day-forecast {
-    padding-right: 20px;
-    display: flex;
-    align-items: right;
-    justify-content: right;
 }

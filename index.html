@@ -4,43 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 
 <header>
-<h1>Weather App (remember to change name)</h1>
+<h1>Weather App</h1>
     
 </header>
 <body>
-
-    <div class="search-div">
-
-    <input class="search-bar"></input>
-    <button>Search City</button>
-
-    </div>
-
-    <div class="day-forecast">
-
-        <h2 class="title">Day Forecast</h2>
-        <h2 class="city-name">City Name</h2>
-        <h2 class="date">Date</h2>
-
-        <div class="weather-icon">Weather Icon</div>
-
-        <div class="weather-info">
-            <h3>Temp</h3>
-            <h3>Wind</h3>
-            <h3>Humidity</h3>
-            <h3>UV Index</h3>
+    <div class="row">
+        <div class="col-sm-4">
+          <form class="example" action="action_page.php">
+          <input type="text" placeholder="Search City" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
         </div>
-
+        <div class="container col-sm-8" id="day-forecast">
+         <h2>Day Forecast</h2>
+            <div class="row">
+             <div class="col-sm-4">
+                <h3>Weather Icon</h3>
+             </div>
+             <div class="col-sm-8">
+                <h3>Weather Info</h3>
+             </div>
+            </div>
+        </div>
     </div>
 
-    <div class="future-forecast">
-        <h2>5 Day Forecast</h2>
-    </div>
-    
+   <script src="./assets/script.js"></script> 
 </body>
 </html>
