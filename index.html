@@ -17,9 +17,13 @@
 <body>
     <div class="row">
         <div class="col-sm-4">
-          <form class="example" action="action_page.php">
-          <input type="text" placeholder="Search City" name="search">
+          <form class="example" action="action_page.php" id="user-form">
+          <input type="text" placeholder="Search City" name="search" id="city">
           <button type="submit"><i class="fa fa-search"></i></button>
+
+          <div id="city-history">
+            
+          </div>
           </form>
         </div>
         <div class="container col-sm-8" id="day-forecast">
