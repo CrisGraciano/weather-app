@@ -52,6 +52,12 @@ form.example::after {
     margin-bottom: 25px;
 }
 
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
 .container h2 {
     display: flex;
     align-items: center;
