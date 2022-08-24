@@ -2,9 +2,17 @@ var userFormEl = document.querySelector("#user-form");
 var cityInputEl = document.querySelector("#city");
 var searchHistoryContainerEl = document.querySelector("#city-history");
 
+//userFormEl.addEventListener("submit", function() {
+    //fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityInputEl + '&appid=3b1abd2025ab8799eea90bf08dc79a30')
+   // .then(response => response.json())
+  //  .then(data => console.log(data))
+
+ //   .catch(err => alert("Error"))
+//})
+
 var getCityWeatherDay = function(city) {
-    // change url to inculde city and required items
-    var apiUrl = //"enter api here"
+     //change url to inculde city and required items
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=29.4252&lon=98.4946&appid=3b1abd2025ab8799eea90bf08dc79a30";
 
     // make api request
     fetch(apiUrl)
@@ -12,8 +20,9 @@ var getCityWeatherDay = function(city) {
         // if response works
         if (response.ok) {
             response.json().then(function(data) {
-                displayWeatherInfo(data, city);
-            });
+                console.log(data);
+                //displayWeatherInfo(data, city);
+           });
         } else {
             alert('Error: No Data Found!');
         }
@@ -26,7 +35,7 @@ var getCityWeatherDay = function(city) {
 var formSubmitHandler = function(event) {
     event.preventDefault();
 
-    var city = cityInputEl.ariaValueMax.trim();
+    var city = cityInputEl.value.trim();
 
     if (city) {
         getCityWeatherDay(city);
