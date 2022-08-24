@@ -13,7 +13,7 @@ var searchHistoryContainerEl = document.querySelector("#city-history");
 var getCityWeatherDay = function(city) {
      //change url to inculde city and required items
     //var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=29.4252&lon=98.4946&appid=3b1abd2025ab8799eea90bf08dc79a30";
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=3b1abd2025ab8799eea90bf08dc79a30"
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=3b1abd2025ab8799eea90bf08dc79a30"
 
     // make api request
     fetch(apiUrl)
