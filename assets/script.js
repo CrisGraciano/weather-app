@@ -40,3 +40,5 @@ var formSubmitHandler = function(event) {
 var displayWeatherInfo = function() {
 
 };
+
+userFormEl.addEventListener("submit", formSubmitHandler);
